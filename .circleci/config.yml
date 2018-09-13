@@ -66,9 +66,17 @@ jobs:
 
       # Run rspec in parallel
       - run:
-          name: Run rspec in parallel
+          name: Run rspec tests
           command: |
             bundle exec rspec --exclude-pattern "spec/features/*_spec.rb" spec
+          after_success:
+            
       # Save test results for timing analysis
       - store_test_results:
           path: test_results
+          
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
+          
+          

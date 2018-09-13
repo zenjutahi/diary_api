@@ -1,4 +1,4 @@
-# README
+[![CircleCI](https://circleci.com/gh/zenjutahi/diary_api.svg?style=svg)](https://circleci.com/gh/zenjutahi/diary_api)[![Coverage Status](https://coveralls.io/repos/github/zenjutahi/diary_api/badge.svg?branch=develop)](https://coveralls.io/github/zenjutahi/diary_api?branch=develop)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
