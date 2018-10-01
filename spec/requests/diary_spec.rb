@@ -12,7 +12,7 @@ RSpec.describe 'Diaries API', type: :request do
     
     it 'returns diaries' do
       # Note `json` is a custom helper to parse JSON responses
-      expect(json).not_to_be_empty
+      expect(json).not_to be_empty
       expect(json.size).to eq(10)
     end
     
@@ -27,7 +27,7 @@ RSpec.describe 'Diaries API', type: :request do
     
     context 'when the recort exists' do
       it 'returns the diaries' do
-        expect(json).not_to_be_empty
+        expect(json).not_to be_empty
         expect(json['id']).to eq(diary_id)
       end
       
