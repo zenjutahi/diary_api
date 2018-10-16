@@ -1,54 +1,54 @@
 require 'rails_helper'
 
 RSpec.describe 'Diaries API', type: :request do
-  #initialize test data
+  # initialize test data
   let!(:diaries) { create_list(:diary, 10) }
-  let(:diary_id) { diaries.first.id}
-  
+  let(:diary_id) { diaries.first.id }
+
   # Test suite for GET /diaries
   describe 'GET /diaries' do
     # make HTTP request before each Test
-    before { get '/diaries'}
-    
+    before { get '/diaries' }
+
     it 'returns diaries' do
       # Note `json` is a custom helper to parse JSON responses
       expect(json).not_to be_empty
       expect(json.size).to eq(10)
     end
-    
+
     it 'returns status code 200' do
       expect(response).to have_http_status(200)
     end
   end
-  
+
   # Test for Get /diaries/:id
   describe 'GET /diaries/:id' do
     before { get "/diaries/#{diary_id}" }
-    
+
     context 'when the recort exists' do
       it 'returns the diaries' do
         expect(json).not_to be_empty
         expect(json['id']).to eq(diary_id)
       end
-      
+
       it 'returns status code 200' do
         expect(response).to have_http_status(200)
       end
     end
-    
+
     context 'when record does not exist' do
       let(:diary_id) { 100 }
-      
+
       it 'returns status code 404' do
         expect(response).to have_http_status(404)
       end
-      
+
       it 'returns a not found message' do
         expect(response.body).to match(/Couldn't find Diary/)
       end
     end
   end
-  
+
   # Test suite for POST /todos
   describe 'POST /diaries' do
     # valid payload
@@ -79,8 +79,8 @@ RSpec.describe 'Diaries API', type: :request do
       end
     end
   end
-  
-    # Test suite for PUT /todos/:id
+
+  # Test suite for PUT /todos/:id
   describe 'PUT /diaries/:id' do
     let(:valid_attributes) { { title: 'Shopping' } }
 
@@ -96,8 +96,8 @@ RSpec.describe 'Diaries API', type: :request do
       end
     end
   end
-  
-    # Test suite for DELETE /todos/:id
+
+  # Test suite for DELETE /todos/:id
   describe 'DELETE /diaries/:id' do
     before { delete "/diaries/#{diary_id}" }
 
@@ -105,5 +105,4 @@ RSpec.describe 'Diaries API', type: :request do
       expect(response).to have_http_status(204)
     end
   end
-
 end

@@ -5,7 +5,6 @@
         1,
         null,
         1,
-        null,
         null
       ],
       "/Users/zenjeff/Documents/P_projects/Ruby/diary-api/spec/rails_helper.rb": [
@@ -89,7 +88,6 @@
         null,
         null,
         1,
-        null,
         null,
         null,
         null
@@ -318,8 +316,6 @@
         1,
         5,
         null,
-        null,
-        null,
         null
       ],
       "/Users/zenjeff/Documents/P_projects/Ruby/diary-api/app/controllers/diaries_controller.rb": [
@@ -365,7 +361,6 @@
         1,
         7,
         null,
-        null,
         null
       ],
       "/Users/zenjeff/Documents/P_projects/Ruby/diary-api/app/controllers/application_controller.rb": [
@@ -395,14 +390,12 @@
         2,
         null,
         null,
-        null,
         null
       ],
       "/Users/zenjeff/Documents/P_projects/Ruby/diary-api/spec/controllers/items_controller_spec.rb": [
         1,
         null,
         1,
-        null,
         null
       ],
       "/Users/zenjeff/Documents/P_projects/Ruby/diary-api/app/controllers/items_controller.rb": [
@@ -420,7 +413,6 @@
         null,
         2,
         2,
-        null,
         null
       ],
       "/Users/zenjeff/Documents/P_projects/Ruby/diary-api/app/models/diary.rb": [
@@ -447,7 +439,6 @@
         null,
         null,
         2,
-        null,
         null
       ],
       "/Users/zenjeff/Documents/P_projects/Ruby/diary-api/app/models/item.rb": [
@@ -567,13 +558,12 @@
         1,
         null,
         null,
-        null,
         null
       ],
       "/Users/zenjeff/Documents/P_projects/Ruby/diary-api/spec/requests/items_spec.rb": [
 
       ]
     },
-    "timestamp": 1538147532
+    "timestamp": 1539702710
   }
 }
