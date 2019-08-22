@@ -47,8 +47,7 @@ rails db:create db:migrate
 rails s
 ```
 ## Continous Integration
-``` using coveralls
-   and circle CI
+``` using coveralls and circle CI
 ```
 ## Licensing
 This app is licensed under the MIT license.
